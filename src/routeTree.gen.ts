@@ -14,6 +14,7 @@ import { Route as ContatoRouteImport } from './routes/contato'
 import { Route as MentoriaRouteImport } from './routes/mentoria'
 import { Route as ObrigadoRouteImport } from './routes/obrigado'
 import { Route as PortfolioRouteImport } from './routes/portfolio'
+import { Route as PrivacidadeRouteImport } from './routes/privacidade'
 import { Route as ProdutosRouteImport } from './routes/produtos'
 import { Route as RecursosRouteImport } from './routes/recursos'
 import { Route as ServicosRouteImport } from './routes/servicos'
@@ -44,6 +45,11 @@ const ObrigadoRoute = ObrigadoRouteImport.update({
 const PortfolioRoute = PortfolioRouteImport.update({
   id: '/portfolio',
   path: '/portfolio',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PrivacidadeRoute = PrivacidadeRouteImport.update({
+  id: '/privacidade',
+  path: '/privacidade',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ProdutosRoute = ProdutosRouteImport.update({
@@ -83,6 +89,7 @@ export interface FileRoutesByFullPath {
   '/mentoria': typeof MentoriaRoute
   '/obrigado': typeof ObrigadoRoute
   '/portfolio': typeof PortfolioRoute
+  '/privacidade': typeof PrivacidadeRoute
   '/produtos': typeof ProdutosRoute
   '/recursos': typeof RecursosRoute
   '/servicos': typeof ServicosRoute
@@ -96,6 +103,7 @@ export interface FileRoutesByTo {
   '/mentoria': typeof MentoriaRoute
   '/obrigado': typeof ObrigadoRoute
   '/portfolio': typeof PortfolioRoute
+  '/privacidade': typeof PrivacidadeRoute
   '/produtos': typeof ProdutosRoute
   '/recursos': typeof RecursosRoute
   '/servicos': typeof ServicosRoute
@@ -110,6 +118,7 @@ export interface FileRoutesById {
   '/mentoria': typeof MentoriaRoute
   '/obrigado': typeof ObrigadoRoute
   '/portfolio': typeof PortfolioRoute
+  '/privacidade': typeof PrivacidadeRoute
   '/produtos': typeof ProdutosRoute
   '/recursos': typeof RecursosRoute
   '/servicos': typeof ServicosRoute
@@ -125,6 +134,7 @@ export interface FileRouteTypes {
     | '/mentoria'
     | '/obrigado'
     | '/portfolio'
+    | '/privacidade'
     | '/produtos'
     | '/recursos'
     | '/servicos'
@@ -138,6 +148,7 @@ export interface FileRouteTypes {
     | '/mentoria'
     | '/obrigado'
     | '/portfolio'
+    | '/privacidade'
     | '/produtos'
     | '/recursos'
     | '/servicos'
@@ -151,6 +162,7 @@ export interface FileRouteTypes {
     | '/mentoria'
     | '/obrigado'
     | '/portfolio'
+    | '/privacidade'
     | '/produtos'
     | '/recursos'
     | '/servicos'
@@ -165,6 +177,7 @@ export interface RootRouteChildren {
   MentoriaRoute: typeof MentoriaRoute
   ObrigadoRoute: typeof ObrigadoRoute
   PortfolioRoute: typeof PortfolioRoute
+  PrivacidadeRoute: typeof PrivacidadeRoute
   ProdutosRoute: typeof ProdutosRoute
   RecursosRoute: typeof RecursosRoute
   ServicosRoute: typeof ServicosRoute
@@ -208,6 +221,13 @@ declare module '@tanstack/react-router' {
       path: '/portfolio'
       fullPath: '/portfolio'
       preLoaderRoute: typeof PortfolioRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/privacidade': {
+      id: '/privacidade'
+      path: '/privacidade'
+      fullPath: '/privacidade'
+      preLoaderRoute: typeof PrivacidadeRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/produtos': {
@@ -261,6 +281,7 @@ const rootRouteChildren: RootRouteChildren = {
   MentoriaRoute: MentoriaRoute,
   ObrigadoRoute: ObrigadoRoute,
   PortfolioRoute: PortfolioRoute,
+  PrivacidadeRoute: PrivacidadeRoute,
   ProdutosRoute: ProdutosRoute,
   RecursosRoute: RecursosRoute,
   ServicosRoute: ServicosRoute,
