@@ -20,9 +20,11 @@ export type Database = {
           created_at: string
           email: string
           id: string
+          interesse: string | null
           mensagem: string | null
           nome: string
           objetivo: string | null
+          organizacao: string | null
           origem: string
           perfil: string
           whatsapp: string | null
@@ -32,9 +34,11 @@ export type Database = {
           created_at?: string
           email: string
           id?: string
+          interesse?: string | null
           mensagem?: string | null
           nome: string
           objetivo?: string | null
+          organizacao?: string | null
           origem?: string
           perfil?: string
           whatsapp?: string | null
@@ -44,9 +48,11 @@ export type Database = {
           created_at?: string
           email?: string
           id?: string
+          interesse?: string | null
           mensagem?: string | null
           nome?: string
           objetivo?: string | null
+          organizacao?: string | null
           origem?: string
           perfil?: string
           whatsapp?: string | null
