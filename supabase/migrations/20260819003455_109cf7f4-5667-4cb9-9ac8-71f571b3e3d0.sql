@@ -1,0 +1,1 @@
+ALTER TABLE public.leads ADD COLUMN IF NOT EXISTS organizacao text, ADD COLUMN IF NOT EXISTS interesse text;
