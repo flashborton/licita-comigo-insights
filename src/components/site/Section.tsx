@@ -2,6 +2,7 @@ import type { ReactNode } from "react";
 import { cn } from "@/lib/utils";
 
 export function Section({
+  id,
   eyebrow,
   titulo,
   descricao,
@@ -10,6 +11,7 @@ export function Section({
   tone = "default",
   as: Tag = "section",
 }: {
+  id?: string;
   eyebrow?: string;
   titulo?: string;
   descricao?: string;
@@ -20,8 +22,9 @@ export function Section({
 }) {
   return (
     <Tag
+      id={id}
       className={cn(
-        "py-16 md:py-20",
+        "py-16 md:py-24",
         tone === "sand" && "bg-sand",
         tone === "navy" && "bg-navy text-navy-foreground",
         className,
@@ -29,16 +32,18 @@ export function Section({
     >
       <div className="container-page">
         {(eyebrow || titulo || descricao) && (
-          <div className="max-w-2xl">
+          <div className="max-w-3xl">
             {eyebrow && <p className="eyebrow">{eyebrow}</p>}
             {titulo && (
-              <h2 className="mt-3 text-2xl font-bold md:text-3xl lg:text-4xl">{titulo}</h2>
+              <h2 className="mt-4 text-[2rem] leading-tight font-bold md:text-[2.25rem]">
+                {titulo}
+              </h2>
             )}
             {descricao && (
               <p
                 className={cn(
-                  "mt-4 text-base leading-relaxed",
-                  tone === "navy" ? "text-navy-foreground/80" : "text-graphite",
+                  "mt-5 text-lg leading-relaxed",
+                  tone === "navy" ? "text-navy-foreground/85" : "text-graphite",
                 )}
               >
                 {descricao}
@@ -46,7 +51,7 @@ export function Section({
             )}
           </div>
         )}
-        {children && <div className={cn(titulo || eyebrow ? "mt-10" : "")}>{children}</div>}
+        {children && <div className={cn(titulo || eyebrow ? "mt-12" : "")}>{children}</div>}
       </div>
     </Tag>
   );
@@ -56,24 +61,39 @@ export function PageHero({
   eyebrow,
   titulo,
   descricao,
+  imagem,
+  alt,
   children,
 }: {
   eyebrow: string;
   titulo: string;
   descricao: string;
+  imagem?: string;
+  alt?: string;
   children?: ReactNode;
 }) {
   return (
-    <section className="bg-navy text-navy-foreground">
-      <div className="container-page py-16 md:py-24">
+    <section className="relative overflow-hidden bg-navy text-navy-foreground">
+      {imagem && (
+        <>
+          <img
+            src={imagem}
+            alt={alt ?? ""}
+            className="absolute inset-0 size-full object-cover opacity-25"
+            loading="eager"
+          />
+          <div className="absolute inset-0 bg-navy/70" />
+        </>
+      )}
+      <div className="relative container-page py-16 md:py-24">
         <p className="eyebrow">{eyebrow}</p>
-        <h1 className="mt-4 max-w-3xl text-3xl leading-tight font-bold md:text-4xl lg:text-5xl">
+        <h1 className="mt-5 max-w-4xl text-[2.5rem] leading-[1.1] font-bold md:text-[3rem]">
           {titulo}
         </h1>
-        <p className="mt-5 max-w-2xl text-base leading-relaxed text-navy-foreground/80 md:text-lg">
+        <p className="mt-6 max-w-2xl text-lg leading-relaxed text-navy-foreground/85">
           {descricao}
         </p>
-        {children && <div className="mt-8">{children}</div>}
+        {children && <div className="mt-9">{children}</div>}
       </div>
     </section>
   );
