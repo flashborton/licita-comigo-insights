@@ -34,11 +34,6 @@ export function Footer() {
                 Privacidade
               </Link>
             </li>
-            <li>
-              <Link to="/termos" className="text-navy-foreground/85 hover:text-gold">
-                Termos
-              </Link>
-            </li>
           </ul>
         </div>
 

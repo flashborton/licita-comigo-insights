@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { site } from "@/lib/site";
+import { site, waLink } from "@/lib/site";
 import { PageHero, Section } from "@/components/site/Section";
 import { LeadForm } from "@/components/site/LeadForm";
 import { SocialLinks } from "@/components/site/SocialLinks";
@@ -40,8 +40,8 @@ function Contato() {
               <ul className="mt-4 space-y-3 text-sm text-graphite">
                 <li>
                   WhatsApp:{" "}
-                  <a href={site.whatsapp} target="_blank" rel="noreferrer" className="hover:text-gold">
-                    {site.whatsapp}
+                  <a href={waLink("geral")} target="_blank" rel="noreferrer" className="hover:text-gold">
+                    {site.whatsappExibicao}
                   </a>
                 </li>
                 <li>E-mail: {site.email}</li>
