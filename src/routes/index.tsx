@@ -215,7 +215,7 @@ function Home() {
       <Section
         tone="sand"
         eyebrow="Transparência de investimento"
-        titulo="Formatos de contratação"
+        titulo="Formatos de contratação e investimento"
         descricao={microcopyProposta}
       >
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
