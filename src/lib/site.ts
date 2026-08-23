@@ -205,6 +205,48 @@ export const solucoes = [
     contexto: "capacitacao" as ContextoWhatsApp,
     rota: "/capacitacao",
   },
+  {
+    slug: "auditoria-licitatoria",
+    titulo: "Auditoria em processos licitatórios",
+    resumo:
+      "Diagnóstico de conformidade procedimental, riscos e gaps documentais em processos de contratação pública.",
+    paraQuem: "Órgãos e empresas que precisam revisar processos licitatórios já concluídos ou em andamento.",
+    itens: [
+      "Revisão da conformidade procedimental do processo",
+      "Mapeamento de riscos documentais e formais",
+      "Relatório de achados com plano de aperfeiçoamento",
+      "Sem promessa de resultado — análise técnica objetiva",
+    ],
+    contexto: "proposta" as ContextoWhatsApp,
+  },
+  {
+    slug: "auditoria-contabil-rh-gestao",
+    titulo: "Auditoria em contabilidade pública, RH e gestão",
+    resumo:
+      "Revisão de rotinas e controles de contabilidade pública, recursos humanos e gestão administrativa.",
+    paraQuem: "Órgãos públicos que precisam fortalecer controles internos e rotinas de gestão.",
+    itens: [
+      "Análise de rotinas contábeis e registros fiscais",
+      "Revisão de controles de RH e folha de pagamento",
+      "Mapeamento de gaps e riscos de gestão",
+      "Relatório de achados + plano de aperfeiçoamento",
+    ],
+    contexto: "proposta" as ContextoWhatsApp,
+  },
+  {
+    slug: "aperfeicoamento-orgaos",
+    titulo: "Aperfeiçoamento da gestão de órgãos públicos",
+    resumo:
+      "Revisão de fluxos, papéis, prazos e governança das áreas de compras e contratos do órgão.",
+    paraQuem: "Órgãos e entidades que precisam organizar ou modernizar a área de contratações.",
+    itens: [
+      "Mapeamento dos fluxos de compras e contratos",
+      "Definição de papéis, responsabilidades e prazos",
+      "Padronização de modelos e listas de verificação",
+      "Plano de implantação com acompanhamento técnico",
+    ],
+    contexto: "proposta" as ContextoWhatsApp,
+  },
 ];
 
 export const formatosInvestimento = [
