@@ -288,7 +288,18 @@ export const formatosInvestimento = [
       "Análise fundamentada e riscos",
       "Recomendação de encaminhamento",
     ],
-    investimento: "Sob complexidade da questão e do material a ser analisado.",
+    investimento: "Investimento sob proposta, conforme complexidade da questão.",
+  },
+  {
+    titulo: "Auditoria (sob escopo)",
+    paraQuem: "Órgãos e empresas que precisam de diagnóstico estruturado de processos, controles ou gestão.",
+    inclui: [
+      "Auditoria em processos licitatórios",
+      "Auditoria em contabilidade pública, RH e gestão",
+      "Aperfeiçoamento da gestão de órgãos públicos",
+      "Relatório de achados e plano de aperfeiçoamento",
+    ],
+    investimento: "Investimento sob proposta, conforme escopo e profundidade da revisão.",
   },
   {
     titulo: "Palestra ou imersão",
@@ -298,7 +309,7 @@ export const formatosInvestimento = [
       "Formato palestra, workshop ou imersão",
       "Alinhamento prévio com a organização",
     ],
-    investimento: "Sob formato, duração e deslocamento.",
+    investimento: "Investimento sob proposta, conforme formato, duração e deslocamento.",
   },
 ];
 
