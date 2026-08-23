@@ -205,6 +205,48 @@ export const solucoes = [
     contexto: "capacitacao" as ContextoWhatsApp,
     rota: "/capacitacao",
   },
+  {
+    slug: "auditoria-licitatoria",
+    titulo: "Auditoria em processos licitatórios",
+    resumo:
+      "Diagnóstico de conformidade procedimental, riscos e gaps documentais em processos de contratação pública.",
+    paraQuem: "Órgãos e empresas que precisam revisar processos licitatórios já concluídos ou em andamento.",
+    itens: [
+      "Revisão da conformidade procedimental do processo",
+      "Mapeamento de riscos documentais e formais",
+      "Relatório de achados com plano de aperfeiçoamento",
+      "Sem promessa de resultado — análise técnica objetiva",
+    ],
+    contexto: "proposta" as ContextoWhatsApp,
+  },
+  {
+    slug: "auditoria-contabil-rh-gestao",
+    titulo: "Auditoria em contabilidade pública, RH e gestão",
+    resumo:
+      "Revisão de rotinas e controles de contabilidade pública, recursos humanos e gestão administrativa.",
+    paraQuem: "Órgãos públicos que precisam fortalecer controles internos e rotinas de gestão.",
+    itens: [
+      "Análise de rotinas contábeis e registros fiscais",
+      "Revisão de controles de RH e folha de pagamento",
+      "Mapeamento de gaps e riscos de gestão",
+      "Relatório de achados + plano de aperfeiçoamento",
+    ],
+    contexto: "proposta" as ContextoWhatsApp,
+  },
+  {
+    slug: "aperfeicoamento-orgaos",
+    titulo: "Aperfeiçoamento da gestão de órgãos públicos",
+    resumo:
+      "Revisão de fluxos, papéis, prazos e governança das áreas de compras e contratos do órgão.",
+    paraQuem: "Órgãos e entidades que precisam organizar ou modernizar a área de contratações.",
+    itens: [
+      "Mapeamento dos fluxos de compras e contratos",
+      "Definição de papéis, responsabilidades e prazos",
+      "Padronização de modelos e listas de verificação",
+      "Plano de implantação com acompanhamento técnico",
+    ],
+    contexto: "proposta" as ContextoWhatsApp,
+  },
 ];
 
 export const formatosInvestimento = [
@@ -226,7 +268,7 @@ export const formatosInvestimento = [
       "Encontros periódicos de trabalho",
       "Revisão de dúvidas técnicas entre encontros",
     ],
-    investimento: "Formato mensal, com valor definido após conversa de encaixe.",
+    investimento: "Investimento sob proposta, formato mensal.",
   },
   {
     titulo: "Treinamento in company",
@@ -236,7 +278,7 @@ export const formatosInvestimento = [
       "Presencial ou remoto",
       "Material de apoio e certificação de participação",
     ],
-    investimento: "Sob orçamento, conforme carga horária e número de participantes.",
+    investimento: "Investimento sob proposta, conforme carga horária e número de participantes.",
   },
   {
     titulo: "Parecer técnico",
@@ -246,7 +288,18 @@ export const formatosInvestimento = [
       "Análise fundamentada e riscos",
       "Recomendação de encaminhamento",
     ],
-    investimento: "Sob complexidade da questão e do material a ser analisado.",
+    investimento: "Investimento sob proposta, conforme complexidade da questão.",
+  },
+  {
+    titulo: "Auditoria (sob escopo)",
+    paraQuem: "Órgãos e empresas que precisam de diagnóstico estruturado de processos, controles ou gestão.",
+    inclui: [
+      "Auditoria em processos licitatórios",
+      "Auditoria em contabilidade pública, RH e gestão",
+      "Aperfeiçoamento da gestão de órgãos públicos",
+      "Relatório de achados e plano de aperfeiçoamento",
+    ],
+    investimento: "Investimento sob proposta, conforme escopo e profundidade da revisão.",
   },
   {
     titulo: "Palestra ou imersão",
@@ -256,7 +309,7 @@ export const formatosInvestimento = [
       "Formato palestra, workshop ou imersão",
       "Alinhamento prévio com a organização",
     ],
-    investimento: "Sob formato, duração e deslocamento.",
+    investimento: "Investimento sob proposta, conforme formato, duração e deslocamento.",
   },
 ];
 
