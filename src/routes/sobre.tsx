@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
-import { trajetoria, site } from "@/lib/site";
+import { experienciaVerificavel, site } from "@/lib/site";
 import { PageHero, Section } from "@/components/site/Section";
 
 const titulo = "Sobre Artur Moura dos Reis — Licita Comigo";
@@ -61,19 +61,19 @@ function Sobre() {
         </div>
       </Section>
 
-      <Section tone="sand" eyebrow="Trajetória" titulo="Linha do tempo">
+      <Section tone="sand" eyebrow="Trajetória" titulo="Experiência verificável">
         <ol className="space-y-4">
-          {trajetoria.map((etapa) => (
+          {experienciaVerificavel.map((etapa) => (
             <li
-              key={etapa.cargo}
-              className="rounded-lg border border-border bg-card p-6 md:flex md:gap-8"
+              key={etapa.titulo}
+              className="rounded-lg border border-border bg-card p-7 md:flex md:gap-8"
             >
-              <p className="text-xs font-semibold tracking-wide text-gold uppercase md:w-40 md:shrink-0">
+              <p className="text-base font-semibold tracking-wide text-gold md:w-44 md:shrink-0">
                 {etapa.periodo}
               </p>
               <div className="mt-2 md:mt-0">
-                <h3 className="text-base font-bold text-card-foreground">{etapa.cargo}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-graphite">{etapa.texto}</p>
+                <h3 className="text-lg font-bold text-card-foreground">{etapa.titulo}</h3>
+                <p className="mt-2 text-base leading-relaxed text-graphite">{etapa.texto}</p>
               </div>
             </li>
           ))}
