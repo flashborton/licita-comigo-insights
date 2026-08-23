@@ -26,7 +26,7 @@ function Sobre() {
       <PageHero
         eyebrow="Sobre"
         titulo="Quem entende licitação por dentro escreve edital, julga proposta e fiscaliza contrato."
-        descricao={`${site.responsavel}, advogado (${site.oab}), pós-graduado em Direito Público e criador do Licita Comigo. Quinze anos de atuação em compras públicas, sempre do lado de quem decide.`}
+        descricao={`${site.fundador}, advogado (${site.oab}), pós-graduado em Direito Público e criador do Licita Comigo. Quinze anos de atuação em compras públicas, sempre do lado de quem decide.`}
       />
 
       <Section eyebrow="Bio em três atos" titulo="Da operação à estratégia">

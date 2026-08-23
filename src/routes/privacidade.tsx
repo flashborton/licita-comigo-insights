@@ -23,7 +23,7 @@ const blocos = [
   {
     t: "1. Quem é o controlador",
     p: [
-      `Os dados coletados neste site são tratados por ${site.responsavel} (${site.oab}), responsável pelo projeto ${site.nome}. Contato para assuntos de privacidade: ${site.email}.`,
+      `Os dados coletados neste site são tratados por ${site.fundador} (${site.oab}), responsável pelo projeto ${site.nome}. Contato para assuntos de privacidade: ${site.email}.`,
     ],
   },
   {
