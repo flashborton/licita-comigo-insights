@@ -10,21 +10,35 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as BibliotecaRouteImport } from './routes/biblioteca'
+import { Route as CapacitacaoRouteImport } from './routes/capacitacao'
 import { Route as ContatoRouteImport } from './routes/contato'
 import { Route as MentoriaRouteImport } from './routes/mentoria'
 import { Route as ObrigadoRouteImport } from './routes/obrigado'
+import { Route as PlataformaRouteImport } from './routes/plataforma'
 import { Route as PortfolioRouteImport } from './routes/portfolio'
 import { Route as PrivacidadeRouteImport } from './routes/privacidade'
 import { Route as ProdutosRouteImport } from './routes/produtos'
 import { Route as RecursosRouteImport } from './routes/recursos'
 import { Route as ServicosRouteImport } from './routes/servicos'
 import { Route as SobreRouteImport } from './routes/sobre'
+import { Route as SolucoesRouteImport } from './routes/solucoes'
 import { Route as ConteudoIndexRouteImport } from './routes/conteudo.index'
 import { Route as ConteudoSlugRouteImport } from './routes/conteudo.$slug'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BibliotecaRoute = BibliotecaRouteImport.update({
+  id: '/biblioteca',
+  path: '/biblioteca',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CapacitacaoRoute = CapacitacaoRouteImport.update({
+  id: '/capacitacao',
+  path: '/capacitacao',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ContatoRoute = ContatoRouteImport.update({
@@ -40,6 +54,11 @@ const MentoriaRoute = MentoriaRouteImport.update({
 const ObrigadoRoute = ObrigadoRouteImport.update({
   id: '/obrigado',
   path: '/obrigado',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PlataformaRoute = PlataformaRouteImport.update({
+  id: '/plataforma',
+  path: '/plataforma',
   getParentRoute: () => rootRouteImport,
 } as any)
 const PortfolioRoute = PortfolioRouteImport.update({
@@ -72,6 +91,11 @@ const SobreRoute = SobreRouteImport.update({
   path: '/sobre',
   getParentRoute: () => rootRouteImport,
 } as any)
+const SolucoesRoute = SolucoesRouteImport.update({
+  id: '/solucoes',
+  path: '/solucoes',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ConteudoIndexRoute = ConteudoIndexRouteImport.update({
   id: '/conteudo/',
   path: '/conteudo/',
@@ -85,44 +109,56 @@ const ConteudoSlugRoute = ConteudoSlugRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/biblioteca': typeof BibliotecaRoute
+  '/capacitacao': typeof CapacitacaoRoute
   '/contato': typeof ContatoRoute
   '/mentoria': typeof MentoriaRoute
   '/obrigado': typeof ObrigadoRoute
+  '/plataforma': typeof PlataformaRoute
   '/portfolio': typeof PortfolioRoute
   '/privacidade': typeof PrivacidadeRoute
   '/produtos': typeof ProdutosRoute
   '/recursos': typeof RecursosRoute
   '/servicos': typeof ServicosRoute
   '/sobre': typeof SobreRoute
+  '/solucoes': typeof SolucoesRoute
   '/conteudo/$slug': typeof ConteudoSlugRoute
   '/conteudo/': typeof ConteudoIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/biblioteca': typeof BibliotecaRoute
+  '/capacitacao': typeof CapacitacaoRoute
   '/contato': typeof ContatoRoute
   '/mentoria': typeof MentoriaRoute
   '/obrigado': typeof ObrigadoRoute
+  '/plataforma': typeof PlataformaRoute
   '/portfolio': typeof PortfolioRoute
   '/privacidade': typeof PrivacidadeRoute
   '/produtos': typeof ProdutosRoute
   '/recursos': typeof RecursosRoute
   '/servicos': typeof ServicosRoute
   '/sobre': typeof SobreRoute
+  '/solucoes': typeof SolucoesRoute
   '/conteudo/$slug': typeof ConteudoSlugRoute
   '/conteudo': typeof ConteudoIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/biblioteca': typeof BibliotecaRoute
+  '/capacitacao': typeof CapacitacaoRoute
   '/contato': typeof ContatoRoute
   '/mentoria': typeof MentoriaRoute
   '/obrigado': typeof ObrigadoRoute
+  '/plataforma': typeof PlataformaRoute
   '/portfolio': typeof PortfolioRoute
   '/privacidade': typeof PrivacidadeRoute
   '/produtos': typeof ProdutosRoute
   '/recursos': typeof RecursosRoute
   '/servicos': typeof ServicosRoute
   '/sobre': typeof SobreRoute
+  '/solucoes': typeof SolucoesRoute
   '/conteudo/$slug': typeof ConteudoSlugRoute
   '/conteudo/': typeof ConteudoIndexRoute
 }
@@ -130,58 +166,74 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/biblioteca'
+    | '/capacitacao'
     | '/contato'
     | '/mentoria'
     | '/obrigado'
+    | '/plataforma'
     | '/portfolio'
     | '/privacidade'
     | '/produtos'
     | '/recursos'
     | '/servicos'
     | '/sobre'
+    | '/solucoes'
     | '/conteudo/$slug'
     | '/conteudo/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/biblioteca'
+    | '/capacitacao'
     | '/contato'
     | '/mentoria'
     | '/obrigado'
+    | '/plataforma'
     | '/portfolio'
     | '/privacidade'
     | '/produtos'
     | '/recursos'
     | '/servicos'
     | '/sobre'
+    | '/solucoes'
     | '/conteudo/$slug'
     | '/conteudo'
   id:
     | '__root__'
     | '/'
+    | '/biblioteca'
+    | '/capacitacao'
     | '/contato'
     | '/mentoria'
     | '/obrigado'
+    | '/plataforma'
     | '/portfolio'
     | '/privacidade'
     | '/produtos'
     | '/recursos'
     | '/servicos'
     | '/sobre'
+    | '/solucoes'
     | '/conteudo/$slug'
     | '/conteudo/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  BibliotecaRoute: typeof BibliotecaRoute
+  CapacitacaoRoute: typeof CapacitacaoRoute
   ContatoRoute: typeof ContatoRoute
   MentoriaRoute: typeof MentoriaRoute
   ObrigadoRoute: typeof ObrigadoRoute
+  PlataformaRoute: typeof PlataformaRoute
   PortfolioRoute: typeof PortfolioRoute
   PrivacidadeRoute: typeof PrivacidadeRoute
   ProdutosRoute: typeof ProdutosRoute
   RecursosRoute: typeof RecursosRoute
   ServicosRoute: typeof ServicosRoute
   SobreRoute: typeof SobreRoute
+  SolucoesRoute: typeof SolucoesRoute
   ConteudoSlugRoute: typeof ConteudoSlugRoute
   ConteudoIndexRoute: typeof ConteudoIndexRoute
 }
@@ -193,6 +245,20 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/biblioteca': {
+      id: '/biblioteca'
+      path: '/biblioteca'
+      fullPath: '/biblioteca'
+      preLoaderRoute: typeof BibliotecaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/capacitacao': {
+      id: '/capacitacao'
+      path: '/capacitacao'
+      fullPath: '/capacitacao'
+      preLoaderRoute: typeof CapacitacaoRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/contato': {
@@ -214,6 +280,13 @@ declare module '@tanstack/react-router' {
       path: '/obrigado'
       fullPath: '/obrigado'
       preLoaderRoute: typeof ObrigadoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/plataforma': {
+      id: '/plataforma'
+      path: '/plataforma'
+      fullPath: '/plataforma'
+      preLoaderRoute: typeof PlataformaRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/portfolio': {
@@ -258,6 +331,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof SobreRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/solucoes': {
+      id: '/solucoes'
+      path: '/solucoes'
+      fullPath: '/solucoes'
+      preLoaderRoute: typeof SolucoesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/conteudo/': {
       id: '/conteudo/'
       path: '/conteudo'
@@ -277,15 +357,19 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  BibliotecaRoute: BibliotecaRoute,
+  CapacitacaoRoute: CapacitacaoRoute,
   ContatoRoute: ContatoRoute,
   MentoriaRoute: MentoriaRoute,
   ObrigadoRoute: ObrigadoRoute,
+  PlataformaRoute: PlataformaRoute,
   PortfolioRoute: PortfolioRoute,
   PrivacidadeRoute: PrivacidadeRoute,
   ProdutosRoute: ProdutosRoute,
   RecursosRoute: RecursosRoute,
   ServicosRoute: ServicosRoute,
   SobreRoute: SobreRoute,
+  SolucoesRoute: SolucoesRoute,
   ConteudoSlugRoute: ConteudoSlugRoute,
   ConteudoIndexRoute: ConteudoIndexRoute,
 }
