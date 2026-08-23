@@ -268,7 +268,7 @@ export const formatosInvestimento = [
       "Encontros periódicos de trabalho",
       "Revisão de dúvidas técnicas entre encontros",
     ],
-    investimento: "Formato mensal, com valor definido após conversa de encaixe.",
+    investimento: "Investimento sob proposta, formato mensal.",
   },
   {
     titulo: "Treinamento in company",
@@ -278,7 +278,7 @@ export const formatosInvestimento = [
       "Presencial ou remoto",
       "Material de apoio e certificação de participação",
     ],
-    investimento: "Sob orçamento, conforme carga horária e número de participantes.",
+    investimento: "Investimento sob proposta, conforme carga horária e número de participantes.",
   },
   {
     titulo: "Parecer técnico",
