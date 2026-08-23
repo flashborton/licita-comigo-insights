@@ -45,7 +45,7 @@ function Solucoes() {
               resumo={s.resumo}
               paraQuem={s.paraQuem}
               itens={s.itens}
-              href={s.rota as "/mentoria" | "/plataforma" | "/capacitacao" | undefined}
+              {...(s.rota ? { href: s.rota as "/mentoria" | "/plataforma" | "/capacitacao" } : {})}
             />
           ))}
         </div>
