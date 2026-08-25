@@ -1,5 +1,11 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { capacitacaoFormatos, capacitacaoPublicos, microcopyRetorno, waLink } from "@/lib/site";
+import {
+  capacitacaoProgramas,
+  capacitacaoPublicosComplementares,
+  microcopyRetorno,
+  waLink,
+} from "@/lib/site";
+import { SolutionCard } from "@/components/site/Cards";
 import { PageHero, Section } from "@/components/site/Section";
 import { LeadForm } from "@/components/site/LeadForm";
 
@@ -38,9 +44,25 @@ function Capacitacao() {
         </a>
       </PageHero>
 
-      <Section eyebrow="Públicos" titulo="Para quem os programas são desenhados">
+      <Section eyebrow="Programas" titulo="Programas de capacitação da Licita Comigo">
         <div className="grid gap-6 md:grid-cols-2">
-          {capacitacaoPublicos.map((p) => (
+          {capacitacaoProgramas.map((p) => (
+            <SolutionCard
+              key={p.titulo}
+              titulo={p.titulo}
+              resumo="Programa conduzido pela nossa metodologia, com aplicação prática da Lei 14.133/2021 na rotina da organização."
+              paraQuem={p.paraQuem}
+              itens={p.itens}
+              href="/contato"
+              hrefLabel="Solicitar programa"
+            />
+          ))}
+        </div>
+      </Section>
+
+      <Section tone="sand" eyebrow="Públicos complementares" titulo="Também atendemos">
+        <div className="grid gap-6 md:grid-cols-2">
+          {capacitacaoPublicosComplementares.map((p) => (
             <article key={p.titulo} className="rounded-lg border border-border bg-card p-7">
               <h3 className="text-lg font-bold text-card-foreground">{p.titulo}</h3>
               <p className="mt-3 text-base leading-relaxed text-graphite">{p.texto}</p>
@@ -49,16 +71,6 @@ function Capacitacao() {
         </div>
       </Section>
 
-      <Section tone="sand" eyebrow="Formatos" titulo="Como a capacitação acontece">
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-          {capacitacaoFormatos.map((f) => (
-            <article key={f.titulo} className="rounded-lg border border-border bg-card p-7">
-              <h3 className="text-lg font-bold text-card-foreground">{f.titulo}</h3>
-              <p className="mt-3 text-base leading-relaxed text-graphite">{f.texto}</p>
-            </article>
-          ))}
-        </div>
-      </Section>
 
       <Section eyebrow="Contato" titulo="Solicitar orçamento de capacitação" descricao={microcopyRetorno}>
         <div className="max-w-2xl">

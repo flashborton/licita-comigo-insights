@@ -9,7 +9,7 @@ export const site = {
   whatsappNumero: "5511992210423",
   whatsappExibicao: "(11) 99221-0423",
   whatsappGrupo: "[PLACEHOLDER_LINK_GRUPO]",
-  email: "[E-MAIL PLACEHOLDER]",
+  email: "em breve",
   instagram: "https://www.instagram.com/licitacomigo",
   tiktok: "https://www.tiktok.com/@licitacomigo",
   youtube: "https://www.youtube.com/@licitacomigo",
@@ -351,17 +351,54 @@ export const metodo = [
   },
 ];
 
-export const capacitacaoPublicos = [
+export const capacitacaoProgramas = [
   {
-    titulo: "Gestores públicos",
-    texto:
-      "Visão de conformidade e eficiência no planejamento das contratações, com foco em decisão informada e rastreável.",
+    titulo: "Capacitação de gestores",
+    paraQuem:
+      "gestores públicos, secretários, dirigentes e quem decide ou planeja contratações.",
+    itens: [
+      "Aplicação prática da Lei 14.133/2021 no planejamento das contratações",
+      "Conformidade procedimental e eficiência do fluxo de compras",
+      "Decisão informada e rastreável, com registro adequado das motivações",
+      "Leitura de riscos administrativos antes da deflagração do certame",
+      "Interlocução técnica com equipes de licitação, jurídico e controle",
+    ],
   },
   {
-    titulo: "Agentes de contratação e pregoeiros",
-    texto:
-      "Condução de certames, julgamento de propostas, diligências e resposta a impugnações e recursos com segurança procedimental.",
+    titulo: "Capacitação de agentes de contratação, pregoeiros e comissões",
+    paraQuem:
+      "agentes de contratação, pregoeiros, membros de comissão de licitação e equipes de julgamento.",
+    itens: [
+      "Condução de certames sob a Lei 14.133/2021",
+      "Julgamento de propostas e realização de diligências",
+      "Tratamento de impugnações e recursos administrativos",
+      "Segurança procedimental em cada fase do processo",
+      "Registro de decisões e formação consistente do processo",
+    ],
   },
+  {
+    titulo: "Treinamento in company",
+    paraQuem: "órgãos e empresas que precisam de programa sob a própria rotina.",
+    itens: [
+      "Programa desenhado a partir dos processos reais da equipe",
+      "Casos do dia a dia da organização como material de trabalho",
+      "Formato presencial ou remoto, com carga horária ajustável",
+      "Alinhamento com normativos internos e fluxos já existentes",
+    ],
+  },
+  {
+    titulo: "Palestras e imersões",
+    paraQuem: "eventos, congressos, encontros de gestores e equipes em padronização.",
+    itens: [
+      "Conteúdo técnico para eventos e encontros institucionais",
+      "Imersão intensiva para padronizar procedimentos em pouco tempo",
+      "Recortes temáticos definidos com a organização contratante",
+      "Material de apoio para consulta posterior da equipe",
+    ],
+  },
+];
+
+export const capacitacaoPublicosComplementares = [
   {
     titulo: "Fiscais e gestores de contrato",
     texto:
