@@ -50,7 +50,7 @@ export function Footer() {
                 WhatsApp {site.whatsappExibicao}
               </a>
             </li>
-            <li>E-mail: {site.email}</li>
+            <li>E-mail em breve</li>
             <li>
               {temGrupoWhatsApp ? (
                 <a
@@ -84,7 +84,6 @@ export function Footer() {
             © {new Date().getFullYear()} {site.nome}. Consultoria e capacitação em contratações
             públicas. Conteúdo informativo, não substitui análise do caso concreto.
           </p>
-          <p>{site.oab} — qualificação do fundador</p>
         </div>
       </div>
     </footer>
