@@ -1,5 +1,11 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { capacitacaoFormatos, capacitacaoPublicos, microcopyRetorno, waLink } from "@/lib/site";
+import {
+  capacitacaoProgramas,
+  capacitacaoPublicosComplementares,
+  microcopyRetorno,
+  waLink,
+} from "@/lib/site";
+import { SolutionCard } from "@/components/site/Cards";
 import { PageHero, Section } from "@/components/site/Section";
 import { LeadForm } from "@/components/site/LeadForm";
 
@@ -47,6 +53,7 @@ function Capacitacao() {
               resumo="Programa conduzido pela nossa metodologia, com aplicação prática da Lei 14.133/2021 na rotina da organização."
               paraQuem={p.paraQuem}
               itens={p.itens}
+              href="/contato"
               hrefLabel="Solicitar programa"
             />
           ))}
